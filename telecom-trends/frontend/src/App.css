@@ -1,0 +1,321 @@
+/* Global app layout */
+.app-root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f172a 0%, #020617 60%, #1e293b 100%);
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* Header */
+.app-header {
+  padding: 16px 32px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.app-subtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.app-header-meta {
+  font-size: 12px;
+  color: #9ca3af;
+  text-align: right;
+  opacity: 0.9;
+}
+
+/* Main container */
+.app-main {
+  padding: 24px 32px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.card {
+  background-color: rgba(15, 23, 42, 0.9);
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.8);
+}
+
+/* Search card */
+.search-card {
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-field-topic {
+  flex: 1 1 260px;
+}
+
+.field-label {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.input-text {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background-color: #020617;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.input-text::placeholder {
+  color: #6b7280;
+}
+
+.select-region {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background-color: #020617;
+  color: #e5e7eb;
+  font-size: 14px;
+  min-width: 150px;
+}
+
+.form-actions {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.btn-primary {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 50%, #7c3aed 100%);
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
+}
+
+.search-hint {
+  font-size: 11px;
+  color: #9ca3af;
+  max-width: 220px;
+}
+
+.status-text {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.status-loading {
+  color: #93c5fd;
+}
+
+.status-error {
+  color: #fca5a5;
+}
+
+/* Dashboard grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
+  gap: 20px;
+}
+
+.dashboard-left,
+.dashboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Card headers */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card-header-with-button {
+  align-items: center;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.card-meta {
+  font-size: 11px;
+  color: #6b7280;
+  text-align: right;
+}
+
+/* Buttons */
+.btn-outline {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background-color: transparent;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  padding: 4px 10px;
+  font-size: 11px;
+  background-color: #f97316;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* Charts */
+.chart-card {
+  padding: 14px 16px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 280px;
+}
+
+.chart-container-small {
+  height: 260px;
+}
+
+.empty-text {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+/* Word cloud */
+.wordcloud-card {
+}
+
+.wordcloud-container {
+  width: 100%;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.wordcloud-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
+.wordcloud-word {
+  cursor: pointer;
+  color: #38bdf8;
+  font-weight: 500;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+}
+
+/* Related list */
+.list-card {
+}
+
+.related-list {
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(31, 41, 55, 0.9);
+}
+
+.related-list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(30, 64, 175, 0.35);
+  background-color: transparent;
+}
+
+.related-list-row-active {
+  background-color: rgba(30, 64, 175, 0.35);
+}
+
+.related-term {
+  margin-bottom: 2px;
+}
+
+.related-score {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .app-header-meta {
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-main {
+    padding: 16px;
+  }
+
+  .app-header {
+    padding: 12px 16px;
+  }
+
+  .form-actions {
+    align-items: flex-start;
+  }
+}
